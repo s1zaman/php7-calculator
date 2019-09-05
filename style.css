@@ -1,13 +1,14 @@
 body
 {
   min-height: 100vh;
+  font-family: montserrat;
   background-image: linear-gradient(120deg, #3498db, #8e44ad);
 }
 .form
 {
-  width: 360px;
+  width: 310px;
   background: #f1f1f1;
-  height: 350px;
+  height: 360px;
   border-radius: 10px;
   position: absolute;
   left: 50%;

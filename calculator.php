@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Example 2.2">
+  <meta name="description" content="Simple PHP Calculator">
   <meta name="author" content="Choudhary Abdullah">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example 2.2</title>
+  <title>Simple PHP Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,12 +15,12 @@
 <body>
 
   <div class="form">
-    <pre><form action="Example2.2.php" method="post">
+    <pre><form action="calculator.php" method="post">
       <h2>Calculator</h2>
-      Number 1 : <input type="text" name="num1" placeholder=" First Number"></br>
-      Operator : <input type="text" name="operator" placeholder=" Operator"></br>
-      Number 2 : <input type="text" name="num2" placeholder=" Second Number"></br>
-      <input type="Submit">
+      <input type="text" name="num1" placeholder=" First Number" class="btn btn-light"></br>
+      <input type="text" name="operator" placeholder=" Operator" class="btn btn-light"></br>
+      <input type="text" name="num2" placeholder=" Second Number" class="btn btn-light"></br>
+      <input type="Submit" class="btn btn-success">
     </form></pre>
 
 
@@ -33,36 +33,51 @@
   { echo null; }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2) && $num2==0)
   {
-    echo "<pre>      Cannot Divide by Zero.</pre>";
+    echo <<<EOT0
+   <button type="button" class="btn btn-warning btn-sm">Cannot Divide by Zero!</button>
+EOT0;
   }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2))
   {
     $division=($num1/$num2);
-    echo "<pre>      Result is $division</pre>";
+    echo <<<EOT1
+   <button type="button" class="btn btn-warning btn-sm">Result is $division</button>
+EOT1;
   }
   else if ($operator=='*' && is_numeric($num1) && is_numeric($num2))
   {
     $multiplication=($num1*$num2);
-    echo "<pre>      Result is $multiplication</pre>";
+    echo <<<EOT2
+   <button type="button" class="btn btn-warning btn-sm">Result is $multiplication</button>
+EOT2;
   }
   else if ($operator=='+' && is_numeric($num1) && is_numeric($num2))
   {
     $addition=($num1+$num2);
-    echo "<pre>      Result is $addition</pre>";
+    echo <<<EOT3
+   <button type="button" class="btn btn-warning btn-sm">Result is $addition</button>
+EOT3;
   }
   else if ($operator=='-' && is_numeric($num1) && is_numeric($num2))
   {
     $subtraction=($num1-$num2);
-    echo "<pre>      Result is $subtraction</pre>";
+    echo <<<EOT4
+   <button type="button" class="btn btn-warning btn-sm">Result is $subtraction</button>
+EOT4;
   }
   else if ($operator=='%' && is_numeric($num1) && is_numeric($num2))
   {
   $remainder=($num1%$num2);
-    echo "<pre>      Result is $remainder</pre>";
+    echo <<<EOT5
+   <button type="button" class="btn btn-warning btn-sm">Result is $remainder</button>
+EOT5;
   }
-  else echo null;
+  else
+  {
+  echo <<<EOT6
+ <button type="button" class="btn btn-warning btn-sm">Invalid Operator !</button>
+EOT6;
+  }
   ?>
-</div>
-
 </body>
 </html>
