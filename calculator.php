@@ -22,7 +22,7 @@
       <input type="text" name="num2" placeholder=" Second Number" class="btn btn-light"></br>
       <input type="Submit" class="btn btn-success">
     </form></pre>
-
+  </div>
 
   <?php
   $num1 = $_POST["num1"];
