@@ -51,6 +51,12 @@ IOK1;
    <button type="button" class="btn btn-warning">No Operator!</button>
 IOK2;
   }
+  else if (!($operator=='/' ||  $operator=='*' ||  $operator=='+' ||  $operator=='-' || $operator=='%'))
+  {
+    echo <<<IOK13
+   <button type="button" class="btn btn-warning">Enter Correct Operator</button>
+IOK13;
+  }
   else if ($num2==null)
   {
     echo <<<IOK3
