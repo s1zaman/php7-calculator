@@ -53,74 +53,74 @@ IOK2;
   }
   else if (!($operator=='/' ||  $operator=='*' ||  $operator=='+' ||  $operator=='-' || $operator=='%'))
   {
-    echo <<<IOK13
+    echo <<<IOK3
    <button type="button" class="btn btn-warning">Enter Correct Operator</button>
-IOK13;
+IOK3;
   }
   else if ($num2==null)
   {
-    echo <<<IOK3
+    echo <<<IOK4
    <button type="button" class="btn btn-warning">Enter Second Number</button>
-IOK3;
+IOK4;
   }
   else if (is_numeric($num2)==null)
   {
-    echo <<<IOK4
+    echo <<<IOK5
    <button type="button" class="btn btn-warning">Entered Value isn't a Number</button>
-IOK4;
+IOK5;
   }
   else if ($num1==null && $num2==null)
   {
-    echo <<<IOK5
+    echo <<<IOK6
    <button type="button" class="btn btn-warning">Please Enter Numbers</button>
-IOK5;
+IOK6;
   }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2) && $num2==0)
   {
-    echo <<<IOK6
+    echo <<<IOK7
    <button type="button" class="btn btn-warning">Cannot Divide by Zero!</button>
-IOK6;
+IOK7;
   }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2))
   {
     $division=($num1/$num2);
-    echo <<<IOK7
+    echo <<<IOK8
    <button type="button" class="btn btn-warning">Result is $division</button>
-IOK7;
+IOK8;
   }
   else if ($operator=='*' && is_numeric($num1) && is_numeric($num2))
   {
     $multiplication=($num1*$num2);
-    echo <<<IOK8
+    echo <<<IOK9
    <button type="button" class="btn btn-warning">Result is $multiplication</button>
-IOK8;
+IOK9;
   }
   else if ($operator=='+' && is_numeric($num1) && is_numeric($num2))
   {
     $addition=($num1+$num2);
-    echo <<<IOK9
+    echo <<<IOK10
    <button type="button" class="btn btn-warning">Result is $addition</button>
-IOK9;
+IOK10;
   }
   else if ($operator=='-' && is_numeric($num1) && is_numeric($num2))
   {
     $subtraction=($num1-$num2);
-    echo <<<IOK10
+    echo <<<IOK11
    <button type="button" class="btn btn-warning">Result is $subtraction</button>
-IOK10;
+IOK11;
   }
   else if ($operator=='%' && is_numeric($num1) && is_numeric($num2))
   {
   $remainder=($num1%$num2);
-    echo <<<IOK11
+    echo <<<IOK12
    <button type="button" class="btn btn-warning">Result is $remainder</button>
-IOK11;
+IOK12;
   }
   else
   {
-  echo <<<IOK12
+  echo <<<IOK13
  <button type="button" class="btn btn-warning">Invalid Operator!</button>
-IOK12;
+IOK13;
   }
   ?>
 </body>
