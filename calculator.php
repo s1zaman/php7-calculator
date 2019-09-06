@@ -15,7 +15,7 @@
 <body>
 
   <div class="form">
-    <pre><form action="calculator.php" method="post">
+    <pre><form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <h2>Calculator</h2>
       <input type="text" name="num1" placeholder=" First Number" class="btn btn-light"></br>
       <input type="text" name="operator" placeholder=" Operator" class="btn btn-light"></br>
