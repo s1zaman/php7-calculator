@@ -30,79 +30,91 @@
   $num2 = $_POST["num2"];
 
   if ($operator==null && $num1==null && $num2==null)
-  { echo null; }
-  else if ($operator==null)
   {
-    echo <<<EOK0
-   <button type="button" class="btn btn-warning">No Operator!</button>
-EOK0;
-  }
-  else if ($num1==null && $num2==null)
-  {
-    echo <<<EOK1
-   <button type="button" class="btn btn-warning">Please Enter Numbers</button>
-EOK1;
+    echo null;
   }
   else if ($num1==null)
   {
-    echo <<<EOK2
+    echo <<<IOK0
    <button type="button" class="btn btn-warning">Enter First Number</button>
-EOK2;
+IOK0;
+  }
+  else if (is_numeric($num1)==null)
+  {
+    echo <<<IOK1
+   <button type="button" class="btn btn-warning">Entered Value isn't a Number</button>
+IOK1;
+  }
+  else if ($operator==null)
+  {
+    echo <<<IOK2
+   <button type="button" class="btn btn-warning">No Operator!</button>
+IOK2;
   }
   else if ($num2==null)
   {
-    echo <<<EOK3
+    echo <<<IOK3
    <button type="button" class="btn btn-warning">Enter Second Number</button>
-EOK3;
+IOK3;
   }
-
-
+  else if (is_numeric($num2)==null)
+  {
+    echo <<<IOK4
+   <button type="button" class="btn btn-warning">Entered Value isn't a Number</button>
+IOK4;
+  }
+  else if ($num1==null && $num2==null)
+  {
+    echo <<<IOK5
+   <button type="button" class="btn btn-warning">Please Enter Numbers</button>
+IOK5;
+  }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2) && $num2==0)
   {
-    echo <<<EOT0
+    echo <<<IOK6
    <button type="button" class="btn btn-warning">Cannot Divide by Zero!</button>
-EOT0;
+IOK6;
   }
   else if ($operator=='/' && is_numeric($num1) && is_numeric($num2))
   {
     $division=($num1/$num2);
-    echo <<<EOT1
+    echo <<<IOK7
    <button type="button" class="btn btn-warning">Result is $division</button>
-EOT1;
+IOK7;
   }
   else if ($operator=='*' && is_numeric($num1) && is_numeric($num2))
   {
     $multiplication=($num1*$num2);
-    echo <<<EOT2
+    echo <<<IOK8
    <button type="button" class="btn btn-warning">Result is $multiplication</button>
-EOT2;
+IOK8;
   }
   else if ($operator=='+' && is_numeric($num1) && is_numeric($num2))
   {
     $addition=($num1+$num2);
-    echo <<<EOT3
+    echo <<<IOK9
    <button type="button" class="btn btn-warning">Result is $addition</button>
-EOT3;
+IOK9;
   }
   else if ($operator=='-' && is_numeric($num1) && is_numeric($num2))
   {
     $subtraction=($num1-$num2);
-    echo <<<EOT4
+    echo <<<IOK10
    <button type="button" class="btn btn-warning">Result is $subtraction</button>
-EOT4;
+IOK10;
   }
   else if ($operator=='%' && is_numeric($num1) && is_numeric($num2))
   {
   $remainder=($num1%$num2);
-    echo <<<EOT5
+    echo <<<IOK11
    <button type="button" class="btn btn-warning">Result is $remainder</button>
-EOT5;
+IOK11;
   }
   else
   {
-  echo <<<EOT6
+  echo <<<IOK12
  <button type="button" class="btn btn-warning">Invalid Operator!</button>
-EOT6;
+IOK12;
   }
   ?>
 </body>
