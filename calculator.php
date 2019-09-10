@@ -6,8 +6,36 @@
   <meta name="author" content="Choudhary Abdullah">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple PHP Calculator</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <?php require_once "connection.php"; $connection = is_connected(); ?>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+  body
+  {
+    min-height: 100vh;
+    font-family: montserrat;
+    background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  }
+  .form
+  {
+    width: 310px;
+    background: #f1f1f1;
+    height: 360px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form h2
+  {
+    text-align: center;
+  }
+  </style>
+
 </head>
 <body>
 
